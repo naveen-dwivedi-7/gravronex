@@ -12,7 +12,7 @@
 {{-- 🌟 Features Carousel Section (Now placed before Services) --}}
 <section class="features-carousel-section fade-in">
     <div class="container">
-        <h2 class="text-center mb-10">Our Services</h2> {{-- <-- Changed heading to Our Services --}}
+        <h2 class="text-center mb-10">Our Capabilities </h2> {{-- <-- Changed heading to Our Services --}}
         
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -47,7 +47,7 @@
 {{-- 💼 Services Section (Now placed after Capabilities) --}}
 <section class="services fade-in">
     <div class="container">
-        <h2>Our Capabilities</h2> {{-- <-- Changed heading to Our Capabilities --}}
+        <h2>Our Services</h2> {{-- <-- Changed heading to Our Capabilities --}}
         <div class="cards">
             @php
                 $services = [
