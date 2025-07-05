@@ -531,9 +531,83 @@
                 font-size: 1.2rem;
             }
         }
+        .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(4, 120, 87, 0.3); /* glass effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+    padding: 1rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    max-height: 60px;
+    width: auto;
+    border-radius: 0.5rem;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+}
+
     </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYFM891DDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GYFM891DDV');
+</script>
 </head>
 <body>
+    <header class="site-header">
+    <div class="container header-container">
+        <a href="/" class="logo-link">
+            <img src="{{ asset('images/gravronex.jpeg') }}" alt="Gravronex Logo" class="logo">
+        </a>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
     <!-- Floating background shapes -->
     <div class="floating-shapes">
         <div class="shape shape-1"></div>
@@ -556,8 +630,8 @@
     <div class="container">
         <div class="glass-card">
             <div class="header">
-                <h1>About Gravronex</h1>
-                <p class="tagline">Where innovation meets execution</p>
+                <h1>About Gravronex Technology Private  Limited</h1>
+                <p class="tagline">Gravgronex – Powering a Greener Tomorrow.</p>
             </div>
             
             <div class="section">

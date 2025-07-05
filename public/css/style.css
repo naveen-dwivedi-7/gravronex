@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f8f9fa;
+    background: white;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background: white;
+    background: green;
     color: #fff;
     padding: 20px 0;
 }
@@ -424,3 +424,234 @@ footer {
     padding: 15px;
     font-size: 18px;
 }
+
+.hero-section {
+    position: relative;
+    background-image: url('../images/Data Analytics Wallpapers.jpg'); /* 🔁 Change to your actual background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* 🌓 Optional dark overlay for contrast */
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section p {
+    margin-bottom: 20px; /* Add spacing below paragraph */
+    font-size: 18px;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.hero-section a.btn {
+    padding: 12px 24px;
+    background-color: #1e40af;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header {
+    background: green;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    height: 40px;
+    width: auto;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #007bff;
+}
+
+header {
+    background: #fff;
+    padding: 5px 0; /* Reduced height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    height: 60px; /* Bigger logo */
+    width: auto;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #007bff;
+}
+
+/* Contact Section Styling */
+.contact {
+  background: linear-gradient(135deg, #e8f5e9, #f1fff6);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact .container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1b5e20;
+  font-size: 28px;
+}
+
+/* Input & Textarea Styles */
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  background-color: #f9fff9;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #388e3c;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Button Styling */
+.contact button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #1b5e20;
+}
+
+/* Success Message */
+p[style*="color: green"] {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2e7d32 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .contact .container {
+    padding: 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.green-header {
+    background-color: var(--primary); /* uses your defined green */
+    padding: 1rem 0;
+    box-shadow: 0 5px 15px rgba(24, 115, 28, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.green-text {
+    color: green; /* uses your defined green */
+}
+
+
+
+.green-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+main {
+    padding-top: 100px; /* Add space equal to header height */
+}
+.logo {
+    max-height: 60px; /* Optional: Keep logo height consistent */
+}
+

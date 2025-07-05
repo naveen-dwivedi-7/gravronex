@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gravronex</title>
+    <title>Gravronex Technology Private Limited</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Gravronex Technology Private Limited" />
+    <meta property="og:description" content="Explore Gravronex Technology Private Limited's green and digital energy solutions." />
+
     <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 
@@ -35,25 +38,52 @@
             }
         });
     });
+
+</script>
+<script>
+  document.addEventListener("input", function (e) {
+    if (e.target.tagName.toLowerCase() === "textarea") {
+      e.target.style.height = "auto";
+      e.target.style.height = e.target.scrollHeight + "px";
+    }
+  });
+
+  // Optional: auto-expand inputs if needed
+  document.querySelectorAll("input[type='text'], input[type='email']").forEach(input => {
+    input.addEventListener("input", () => {
+      input.style.width = "100%"; // fixed width
+      input.style.height = "auto";
+      input.style.height = input.scrollHeight + "px";
+    });
+  });
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYFM891DDV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GYFM891DDV');
+</script>
 
 
 </head>
 <body>
-    <header>
-        <div class="container">
-          <a href="/">
-    <img src="{{ asset('images/gravronex.jpeg') }}" alt="Gravronex Logo" class="logo">
-</a>
+    <header class="green-header">
+    <div class="container">
+        <a href="/">
+            <img src="{{ asset('images/gravronex.jpeg') }}" alt="Gravronex Logo" class="logo">
+        </a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about">About Us</a> <!-- Added About Us link -->
-                <a href="/contact">Contact</a>
-            </nav>
-        </div>
-    </header>
 
     <main>
         @yield('content')

@@ -1,13 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero">
-    <div class="container fade-in">
-        <h1>Welcome to Gravronex</h1>
-        <p>Your partner in building powerful digital experiences.</p>
-        <a href="/contact" class="btn">Get in Touch</a>
+<section 
+    class="hero-section fade-in bg-cover bg-center bg-no-repeat min-h-screen" 
+    style="background-image: url('{{ asset('images/Data Analytics Wallpapers.jpg') }}');">
+    <div class="container text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Welcome to Gravronex</h1>
+        <p class="text-lg mb-6 text-green-400">"Gravronex – Powering a Greener Tomorrow."</p>
+        <a href="/contact" class="btn bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
+            Get in Touch
+        </a>
     </div>
 </section>
+
+
+
 
 {{-- 🌟 Features Carousel Section (Now placed before Services) --}}
 <section class="features-carousel-section fade-in">
@@ -90,7 +97,7 @@
             @php
                 $team = [
                     ['name' => 'Priyanka', 'designation' => 'Product Manager & Operations', 'photo' => 'images/team/priyanka.jpeg'],
-                    ['name' => 'Riya Singh', 'designation' => 'CTO & VP', 'photo' => 'images/team/riya.jpeg'],
+                    ['name' => 'Riya Singh', 'designation' => 'CTO & VP', 'photo' => 'images/team/riya singh.jpeg'],
                 ];
             @endphp
 
