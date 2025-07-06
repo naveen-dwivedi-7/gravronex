@@ -6,6 +6,7 @@ use App\Models\Contact;
 use App\Mail\ContactMessage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -17,12 +18,18 @@ class ContactController extends Controller
             'message' => 'required|string|min:10',
         ]);
 
-        // Store to DB
-        $contact = Contact::create($validated);
+        try {
+            // Store to DB
+            $contact = Contact::create($validated);
 
-        // Send mail using data just stored
-        Mail::to('dwivedinaveen34@gmail.com')->send(new ContactMessage($validated));
+            // Send mail
+            Mail::to('info@gravronex.com')->send(new ContactMessage($validated));
 
-        return back()->with('success', 'Thank you! Your message has been sent and saved.');
+            return back()->with('success', 'Thank you! Your message has been sent and saved.');
+            
+        } catch (\Exception $e) {
+            Log::error('Email sending failed: '.$e->getMessage());
+            return back()->with('error', 'Message saved but email failed: '.$e->getMessage());
+        }
     }
 }

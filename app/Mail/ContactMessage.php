@@ -4,52 +4,24 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class ContactMessage extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public array $contactData;
+    public $data;
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(array $contactData)
+    public function __construct(array $data)
     {
-        $this->contactData = $contactData;
+        $this->data = $data;
     }
 
-    /**
-     * Get the message envelope.
-     */
-    public function envelope(): Envelope
+    public function build()
     {
-        return new Envelope(
-            subject: 'Contact Message',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'emails.contact', // ✅ reference to Blade file
-            with: [
-                'contactData' => $this->contactData, // ✅ pass data to view
-            ],
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
-     */
-    public function attachments(): array
-    {
-        return [];
+        return $this->from(config('mail.from.address'), config('mail.from.name'))
+                    ->subject('New Contact Message: ' . $this->data['name'])
+                    ->view('emails.contact')
+                    ->with(['data' => $this->data]);
     }
 }
