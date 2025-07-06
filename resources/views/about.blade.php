@@ -598,7 +598,7 @@
     <header class="site-header">
     <div class="container header-container">
         <a href="/" class="logo-link">
-            <img src="{{ asset('images/gravronex.jpeg') }}" alt="Gravronex Logo" class="logo">
+            <img src="{{ asset('images/gravronex new logo.jpeg') }}" alt="Gravronex Logo" class="logo">
         </a>
         <nav class="nav-links">
             <a href="/">Home</a>
@@ -631,7 +631,7 @@
         <div class="glass-card">
             <div class="header">
                 <h1>About Gravronex Technology Private  Limited</h1>
-                <p class="tagline">Gravgronex – Powering a Greener Tomorrow.</p>
+                <p class="tagline">Gravgronex – Smart Solutions.</p>
             </div>
             
             <div class="section">

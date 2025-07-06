@@ -24,9 +24,10 @@ header {
 }
 
 .logo {
-    height: 120px; /* Make logo bigger */
-    display: inline-block;
+    width: 200px;
+    height: 100;
 }
+
 
 nav {
     float: right;
@@ -654,4 +655,7 @@ main {
 .logo {
     max-height: 60px; /* Optional: Keep logo height consistent */
 }
-
+.newlogo {
+    width: 150px;
+    height: auto;
+}

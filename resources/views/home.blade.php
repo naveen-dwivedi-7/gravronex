@@ -6,7 +6,7 @@
     style="background-image: url('{{ asset('images/Data Analytics Wallpapers.jpg') }}');">
     <div class="container text-center">
         <h1 class="text-4xl font-bold text-white mb-4">Welcome to Gravronex</h1>
-        <p class="text-lg mb-6 text-green-400">"Gravronex – Powering a Greener Tomorrow."</p>
+        <p class="text-lg mb-6 text-green-400">"Gravronex – Smart Solutions."</p>
         <a href="/contact" class="btn bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
             Get in Touch
         </a>

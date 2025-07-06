@@ -74,7 +74,7 @@
     <header class="green-header">
     <div class="container">
         <a href="/">
-            <img src="{{ asset('images/gravronex.jpeg') }}" alt="Gravronex Logo" class="logo">
+            <img src="{{ asset('images/gravronex new logo.jpeg') }}" alt="Gravronex Logo" class="newlogo">
         </a>
         <nav>
             <a href="/">Home</a>
